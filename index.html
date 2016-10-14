@@ -137,6 +137,83 @@
       <div class="body-wrap">
         
   
+    <article id="post-js兼容性问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/14/js兼容性问题/">js兼容性问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JS的兼容性问题（总结）"><a href="#JS的兼容性问题（总结）" class="headerlink" title="JS的兼容性问题（总结）:"></a>JS的兼容性问题（总结）:</h2><pre><code>1.注册事件的兼容处理
+ if(obj.addEventListener){
+    obj.addEventListener(type,handler,false);
+  }else{
+    obj.attachEvent(&apos;on&apos;+type,handler);
+  }
+  2.解除绑定的事件兼容处理
+  if(obj.removeEventListener){
+    obj.removeEventListener(type,handler);
+  }else{
+    obj.detachEvent(&apos;on&apos;+type,handler);
+  }
+3.阻止冒泡的兼容处理
+  if(event.stopPropagation)
+   {
+    //标准浏览器
+     event.stopPropagation();
+   }else{
+    //ie6,7,8
+     event.cancleBubble = true;
+   }
+4.阻止默认行为的兼容处理
+  if(e.preventDefault){
+    //标准浏览器
+    e.preventDefault();
+   }else{
+    //IE678
+    e.returnValue = false;
+   }
+5.事件对象的兼容处理
+  e = e || window.event;
+6.获取触发事件的对象
+  var tar = e.target || e.srcElement;
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/10/14/js兼容性问题/" class="archive-article-date">
+  	<time datetime="2016-10-14T14:27:04.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-14</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-hexo部署到gitbub" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
