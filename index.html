@@ -354,8 +354,52 @@ hexo version  #查看Hexo的版本
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#面向对象01</p>
-
+        <h1 id="什么是面向对象？"><a href="#什么是面向对象？" class="headerlink" title="什么是面向对象？"></a>什么是面向对象？</h1><ul>
+<li><p>面向对象是一种编程模式</p>
+<ul>
+<li>好处：1.可维护性高 2.重用性高</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>构造函数、实例对象、原型三者的关系？</p>
+<ul>
+<li>所有的构造函数都有一个原型属性<code>prototype</code>,属性值也是一个对象（<code>new Object()</code>）原型对象</li>
+<li>实例对象都有一个默认的属性<code>__proto__</code>，该属性不是标准（每个浏览器的这个属性的名<br>称不一样）在实际开发中不可以使用这个属性，该属性是浏览器自己使用，该属性的指向和原<br>型prototype指向相同。<ul>
+<li>3.原型对象（<code>prototype</code>）里面都有一个<code>constructor</code>属性，该属性指向原型所属的构造函数。</li>
+</ul>
+</li>
+</ul>
+<hr>
+</li>
+<li><p>原型</p>
+<ul>
+<li>实现数据共享</li>
+<li>构造函数中原型属性<code>prototype</code>指向的区域被所有的实例共享</li>
+<li><code>prototype</code>是从构造函数的角度来说的。</li>
+<li><code>__proto__</code>是从实例对象的角度来说的</li>
+</ul>
+<hr>
+</li>
+<li>this<ul>
+<li>构造函数中的this</li>
+<li>原型方法中的this</li>
+<li>事件函数中的this</li>
+</ul>
+<hr>
+</li>
+<li><p>new 实际上背后做了什么？</p>
+<ul>
+<li>分配内存，用来存储具体的数据。</li>
+<li>分配好之后用this指向这块区域（this存储内存地址）实际上this就是一个内存地址</li>
+<li>接下来会通过this指向的这块区域添加属性，并且存放数据。</li>
+<li>返回this(内存地址)</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><pre><code>一般情况下，方法放在原型上，属性放到构造函数中，达成的效果是：所有实例共享方法，但数据各自有一份。
+</code></pre>
       
     </div>
     <div class="article-info article-info-index">
