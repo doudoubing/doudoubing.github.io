@@ -381,47 +381,7 @@ hexo version  #查看Hexo的版本
 </ul>
 <ul>
 <li><p>函数的调用方式觉得了this的指向（5种）</p>
-<p>  1)普通函数里的this</p>
-<pre><code>function fn(){
-    //&quot;use strict&quot; 严格模式下ES5 this ===window false  this是undefined
-    console.log(this ===window);  //true ES3
-}
-</code></pre><p>  2)构造函数</p>
-<pre><code>function Person(username,age) {
-    //构造函数中的this就是实例对象
-    this.username = username;
-    this.age = age;
-}
-Person.prototype.showAge = function(){
-</code></pre><p>  3)原型方法中的this和构造函数中的this指向相同，都是实例对象</p>
-<pre><code>    console.log(this.age);
-}
-var p = new Person(&apos;zhangsan&apos;,12);
-console.log(p.age);
-p.showAge();
-</code></pre><p>  4)对象的方法</p>
-<pre><code>var obj = {
-    info : &apos;qq&apos;,
-    showInfo : function(){
-        //这里的this就是方法所属的对象obj
-        console.log(this.info);
-    }
-}
-obj.showInfo();//方法之前的点前面的对象是谁，那么方法内部的this就是谁
-// 事件方法
-window.onload = function(){
-    var btn = document.getElementById(&apos;btn&apos;);
-    btn.onclick = function(){
-        //事件函数中的this就是注册事件的对象btn
-        this.style.backgroundColor = &apos;orange&apos;;
-    }
-}
-</code></pre><p>   5)定时函数</p>
-<pre><code>setTimeout(function(){
-    //定时函数中的this就是window
-    console.log(this === window);
-},1000);
-</code></pre><p>  如果作为普通函数使用，不推荐在函数内使用this,在严格模式下，普通函数中的this就是window</p>
+<p>  1)普通函数里的this<br>  2)构造函数<br>  3)原型方法中的this和构造函数中的this指向相同，都是实例对象<br>  4)对象的方法<br>  5)定时函数<br>  如果作为普通函数使用，不推荐在函数内使用this,在严格模式下，普通函数中的this就是window</p>
 </li>
 </ul>
 
