@@ -4,18 +4,51 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>面向对象02 | 窦兵个人博客</title>
+  <title>hexo部署到gitbub | 窦兵个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="面向对象02">
+  <meta name="description" content="hexo部署到github将hexo部署到github上的几个步骤：1.下载hexo及初始化
+
+npm insatll hexo-cli -g
+hexo init blog
+cd blog
+npm insatll 
+hexo server
+
+2.在部署之前更改_config.yml文件改为
+deploy:
+    type: github
+    repository: git@github.co">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面向对象02">
-<meta property="og:url" content="http://yoursite.com/2016/10/14/面向对象02/index.html">
+<meta property="og:title" content="hexo部署到gitbub">
+<meta property="og:url" content="http://yoursite.com/2016/10/14/hexo部署到gitbub/index.html">
 <meta property="og:site_name" content="窦兵个人博客">
-<meta property="og:description" content="面向对象02">
-<meta property="og:updated_time" content="2016-10-14T13:54:44.589Z">
+<meta property="og:description" content="hexo部署到github将hexo部署到github上的几个步骤：1.下载hexo及初始化
+
+npm insatll hexo-cli -g
+hexo init blog
+cd blog
+npm insatll 
+hexo server
+
+2.在部署之前更改_config.yml文件改为
+deploy:
+    type: github
+    repository: git@github.co">
+<meta property="og:updated_time" content="2016-10-14T14:21:07.907Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面向对象02">
-<meta name="twitter:description" content="面向对象02">
+<meta name="twitter:title" content="hexo部署到gitbub">
+<meta name="twitter:description" content="hexo部署到github将hexo部署到github上的几个步骤：1.下载hexo及初始化
+
+npm insatll hexo-cli -g
+hexo init blog
+cd blog
+npm insatll 
+hexo server
+
+2.在部署之前更改_config.yml文件改为
+deploy:
+    type: github
+    repository: git@github.co">
   
     <link rel="alternative" href="/atom.xml" title="窦兵个人博客" type="application/atom+xml">
   
@@ -139,7 +172,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-面向对象02" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-hexo部署到gitbub" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -149,7 +182,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      面向对象02
+      hexo部署到gitbub
     </h1>
   
 
@@ -157,13 +190,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="面向对象02"><a href="#面向对象02" class="headerlink" title="面向对象02"></a>面向对象02</h1>
+        <h1 id="hexo部署到github"><a href="#hexo部署到github" class="headerlink" title="hexo部署到github"></a>hexo部署到github</h1><h2 id="将hexo部署到github上的几个步骤："><a href="#将hexo部署到github上的几个步骤：" class="headerlink" title="将hexo部署到github上的几个步骤："></a>将hexo部署到github上的几个步骤：</h2><p><strong>1.下载hexo及初始化</strong></p>
+<ul>
+<li>npm insatll hexo-cli -g</li>
+<li>hexo init blog</li>
+<li>cd blog</li>
+<li>npm insatll </li>
+<li>hexo server</li>
+</ul>
+<p><strong>2.在部署之前更改_config.yml文件改为</strong></p>
+<pre><code>deploy:
+    type: github
+    repository: git@github.com:zhchnchn/zhchnchn.github.io.git
+    branch: master
+</code></pre><p><strong>3.当遇到部署提示找不到Git</strong></p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre><p><strong>4.部署三部曲</strong></p>
+<pre><code>hexo clean 
+hexo generate (hexo g)
+hexo deploy (hexo d)
+</code></pre><p><strong>5.常用命令</strong></p>
+<pre><code>hexo new &quot;postName&quot; #新建文章
+hexo new page &quot;pageName&quot; #新建页面
+hexo generate #生成静态页面至public目录
+hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）
+hexo deploy #将.deploy目录部署到GitHub
+hexo help  # 查看帮助
+hexo version  #查看Hexo的版本
+</code></pre><p><strong>6.hexo配置</strong></p>
+<pre><code>1.主题及标题和作者配置
+    1）找到根目录下的_config.yml，将theme:你想要的主题名
+    2）找到根目录下的_config.ym，将author:你的名字
+    3）找到根目录下的_config.ym，将title:你的标题名
+2.头像
+    找到你应用的主题的_config.yml配置文件，将avar:头像地址
+</code></pre>
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/10/14/面向对象02/" class="archive-article-date">
-  	<time datetime="2016-10-14T13:26:40.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-14</time>
+      <a href="/2016/10/14/hexo部署到gitbub/" class="archive-article-date">
+  	<time datetime="2016-10-14T14:20:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-14</time>
 </a>
       
       
@@ -176,18 +243,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/10/14/hexo部署到gitbub/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hexo部署到gitbub
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/10/14/面向对象01/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">面向对象01</div>
+    <a href="/2016/10/14/面向对象02/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面向对象02</div>
       <i class="icon-circle-right"></i>
     </a>
   
