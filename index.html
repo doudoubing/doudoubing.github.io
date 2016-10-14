@@ -380,7 +380,7 @@ hexo version  #查看Hexo的版本
 </li>
 </ul>
 <ul>
-<li><p>函数的调用方式觉得了this的指向（5种）<br>-</p>
+<li><p>函数的调用方式觉得了this的指向（5种）</p>
 <p>  1)普通函数里的this<br>  function fn(){<br>  //“use strict” 严格模式下ES5 this ===window false  this是undefined<br>  console.log(this ===window);  //true ES3<br>  }<br>  2)构造函数</p>
 <pre><code>function Person(username,age) {
     //构造函数中的this就是实例对象
@@ -403,7 +403,6 @@ p.showAge();
     }
 }
 obj.showInfo();//方法之前的点前面的对象是谁，那么方法内部的this就是谁
-
 // 事件方法
 window.onload = function(){
     var btn = document.getElementById(&apos;btn&apos;);
