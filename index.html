@@ -530,11 +530,16 @@ hexo version  #查看Hexo的版本
 <h2 id="重要的指令"><a href="#重要的指令" class="headerlink" title="重要的指令"></a>重要的指令</h2><ul>
 <li><p>ng-app</p>
 <ul>
-<li>所有需要ng管理的代码必须被包裹在一个有ng-app指令的元素中<br>ng-app是ng的入口，表示当前元素的所有指令都会被angular管理（对每一个指令进行分析和操作）</li>
+<li>所有需要ng管理的代码必须被包裹在一个有ng-app指令的元素中</li>
+<li>ng-app是ng的入口，表示当前元素的所有指令都会被angular管理（对每一个指令进行分析和操作）</li>
+<li>当angular执行ng-app的代码时会开辟一块空间，这块空间用来存储页面上可能会用到的数据模型</li>
 </ul>
 </li>
-<li><p>ng-model</p>
+<li><p>ng-model是双向数据绑定的指令</p>
 </li>
+</ul>
+<h2 id="Angular特点"><a href="#Angular特点" class="headerlink" title="Angular特点"></a>Angular特点</h2><ul>
+<li>最大程度的减少页面的DOM操作</li>
 </ul>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><pre><code>&lt;body&gt;
       &lt;div ng-app&gt;
