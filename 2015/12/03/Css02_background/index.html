@@ -28,7 +28,7 @@ background-size:900px 500px;(宽，高)
 当为%，auto时，可实现背景图片的尺寸保持宽高比并且随着元素的宽度或高度变化而变化
 background-size:100% auto
 background-si">
-<meta property="og:updated_time" content="2016-10-16T13:17:37.678Z">
+<meta property="og:updated_time" content="2016-10-16T14:37:39.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Background">
 <meta name="twitter:description" content="背景尺寸background-size
@@ -198,10 +198,28 @@ background-si">
 <li><code>background-size:contain</code><h2 id="背景原点background-origin"><a href="#背景原点background-origin" class="headerlink" title="背景原点background-origin"></a>背景原点background-origin</h2></li>
 </ul>
 </li>
-<li>此属性可设置背景的起点位置，三个值分别是：content-box内容区域，padding-box内边距区域，border-box边框区域<ul>
-<li><code>backrgound-origin:content-box;</code>   </li>
-<li><code>background-origin:padding-box;</code></li>
-<li><code>background-origin:border-box;</code><br>##背景裁切</li>
+<li>设置背景图片的左上角的起始位置(默认是padding-box)</li>
+<li>三个值分别是：content-box，padding-box，border-box<ul>
+<li><code>backrgound-origin:content-box;</code>背景图片的左上角置于内容区域以内   </li>
+<li><code>background-origin:padding-box;</code>背景图片的左上角置于内边距区域以内</li>
+<li><code>background-origin:border-box;</code>背景图片的左上角置于边框区域以内<br>##背景裁切background-clip</li>
+</ul>
+</li>
+<li>设置背景图片的显示区域(默认是padidng-box)</li>
+<li>三个值分别是：content-box,padding-box,border-box<ul>
+<li><code>background-clip:content-box</code>背景图片只在内容区域显示</li>
+<li><code>background-clip:padding-box</code>背景图片只会在padding以内区域显示</li>
+<li><code>background-clip:border-box</code>背景图片只会显示在border区域以内 <h2 id="多重背景"><a href="#多重背景" class="headerlink" title="多重背景"></a>多重背景</h2></li>
+</ul>
+</li>
+<li><code>background-image:背景一，背景二...</code>逗号分割多个背景</li>
+<li><code>background-position:left top,right top...</code>逗号分割设置配置位置<h2 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h2><ul>
+<li>线性渐变linear-gradient</li>
+<li><code>background-image:linear-gradient(方向(关键字或角度默认从上到下)，颜色 [距离]，颜色[距离])</code></li>
+<li><code>background-image:linear-gradient(to right,yellow 50px,red 60px)</code></li>
+<li>径向渐变radial-gradient</li>
+<li><code>background-image:radial-gradient(半径 at 位置(关键字或坐标),颜色 距离，颜色 距离)</code></li>
+<li><code>background-image:radial-gradient(20px at 20px 30px,yellow 10px,blue 120px)</code></li>
 </ul>
 </li>
 </ul>
@@ -229,18 +247,18 @@ background-si">
   
 <nav id="article-nav">
   
-    <a href="/2016/04/06/面向对象01/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/12/10/Css3_阴影及颜色表示发/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          初识面向对象
+          阴影属性及颜色表示法
         
       </div>
     </a>
   
   
     <a href="/2015/12/02/Css301md/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">新增选择器及阴影属性</div>
+      <div class="article-nav-title">新增选择器</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -333,7 +351,7 @@ background-si">
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/Css3/" style="font-size: 20px;">Css3</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/URL/" style="font-size: 10px;">URL</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/prototype/" style="font-size: 10px;">prototype</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a>
+    				<a href="/tags/Css3/" style="font-size: 20px;">Css3</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/URL/" style="font-size: 10px;">URL</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/css3/" style="font-size: 15px;">css3</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/prototype/" style="font-size: 10px;">prototype</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a>
     			</div>
     	</section>
     

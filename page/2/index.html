@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: hexo | 窦兵个人博客</title>
+  <title>窦兵个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="窦兵个人博客">
-<meta property="og:url" content="http://yoursite.com/tags/hexo/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="窦兵个人博客">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="窦兵个人博客">
@@ -137,52 +137,155 @@
       <div class="body-wrap">
         
   
-  
+    <article id="post-URL构成" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/09/14/hexo部署到gitbub/" class="archive-article-date">
-  	<time datetime="2015-09-14T14:20:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-09-14</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/09/14/hexo部署到gitbub/">hexo部署到gitbub</a>
+      <a class="article-title" href="/2015/10/12/URL构成/">URL构成</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="可以通过window-location拿到所有信息"><a href="#可以通过window-location拿到所有信息" class="headerlink" title="可以通过window.location拿到所有信息"></a>可以通过window.location拿到所有信息</h2><ul>
+<li><p><a href="https://www.baidu.com:8080/aaa/1.html?id=10#name为例：" target="_blank" rel="external">https://www.baidu.com:8080/aaa/1.html?id=10#name为例：</a></p>
+<ul>
+<li>protocol: https (协议名)</li>
+<li>host: www.baidu.com:8080 （主机地址）<br>　　    - hostname: www.baidu.com  （主机名）</li>
+<li>port: 8080 （端口号）</li>
+<li>pathname: /aaa/1.html （路径名）</li>
+<li>search: ?id=10 （查询参数）</li>
+<li>hash: #name （锚点）</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/10/12/URL构成/" class="archive-article-date">
+  	<time datetime="2015-10-12T11:20:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-10-12</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/URL/">URL</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hexo部署到gitbub" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/14/hexo部署到gitbub/">hexo部署到gitbub</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="将hexo部署到github上的几个步骤："><a href="#将hexo部署到github上的几个步骤：" class="headerlink" title="将hexo部署到github上的几个步骤："></a>将hexo部署到github上的几个步骤：</h2><p><strong>1.下载hexo及初始化</strong></p>
+<ul>
+<li>npm insatll hexo-cli -g</li>
+<li>hexo init blog</li>
+<li>cd blog</li>
+<li>npm insatll </li>
+<li>hexo server</li>
+</ul>
+<p><strong>2.在部署之前更改_config.yml文件改为</strong></p>
+<pre><code>deploy:
+    type: github
+    repository: git@github.com:zhchnchn/zhchnchn.github.io.git
+    branch: master
+</code></pre><p><strong>3.当遇到部署提示找不到Git</strong></p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre><p><strong>4.部署三部曲</strong></p>
+<pre><code>hexo clean 
+hexo generate (hexo g)
+hexo deploy (hexo d)
+</code></pre><p><strong>5.常用命令</strong></p>
+<pre><code>hexo new &quot;postName&quot; #新建文章
+hexo new page &quot;pageName&quot; #新建页面
+hexo generate #生成静态页面至public目录
+hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）
+hexo deploy #将.deploy目录部署到GitHub
+hexo help  # 查看帮助
+hexo version  #查看Hexo的版本
+</code></pre><p><strong>6.hexo配置</strong></p>
+<pre><code>1.主题及标题和作者配置
+    1）找到根目录下的_config.yml，将theme:你想要的主题名
+    2）找到根目录下的_config.ym，将author:你的名字
+    3）找到根目录下的_config.ym，将title:你的标题名
+2.头像
+    找到你应用的主题的_config.yml配置文件，将avar:头像地址
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/09/14/hexo部署到gitbub/" class="archive-article-date">
+  	<time datetime="2015-09-14T14:20:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-09-14</time>
+</a>
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 
 
       </div>
@@ -204,10 +307,10 @@
 		fancybox: true,
 		mathjax: false,
 		animate: true,
-		isHome: false,
+		isHome: true,
 		isPost: false,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
