@@ -214,7 +214,7 @@
 
 
   
-    <article id="post-hexo部署到gitbub" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-angular入门01" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -224,7 +224,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/14/hexo部署到gitbub/">hexo部署到gitbub</a>
+      <a class="article-title" href="/2016/04/14/angular入门01/">angular入门01</a>
     </h1>
   
 
@@ -232,47 +232,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="将hexo部署到github上的几个步骤："><a href="#将hexo部署到github上的几个步骤：" class="headerlink" title="将hexo部署到github上的几个步骤："></a>将hexo部署到github上的几个步骤：</h2><p><strong>1.下载hexo及初始化</strong></p>
-<ul>
-<li>npm insatll hexo-cli -g</li>
-<li>hexo init blog</li>
-<li>cd blog</li>
-<li>npm insatll </li>
-<li>hexo server</li>
+        <h2 id="Angular的核心特性"><a href="#Angular的核心特性" class="headerlink" title="Angular的核心特性"></a>Angular的核心特性</h2><ul>
+<li>MVC</li>
+<li>模块化</li>
+<li>自动化双向数据绑定</li>
+<li>指令系统</li>
 </ul>
-<p><strong>2.在部署之前更改_config.yml文件改为</strong></p>
-<pre><code>deploy:
-    type: github
-    repository: git@github.com:zhchnchn/zhchnchn.github.io.git
-    branch: master
-</code></pre><p><strong>3.当遇到部署提示找不到Git</strong></p>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre><p><strong>4.部署三部曲</strong></p>
-<pre><code>hexo clean 
-hexo generate (hexo g)
-hexo deploy (hexo d)
-</code></pre><p><strong>5.常用命令</strong></p>
-<pre><code>hexo new &quot;postName&quot; #新建文章
-hexo new page &quot;pageName&quot; #新建页面
-hexo generate #生成静态页面至public目录
-hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）
-hexo deploy #将.deploy目录部署到GitHub
-hexo help  # 查看帮助
-hexo version  #查看Hexo的版本
-</code></pre><p><strong>6.hexo配置</strong></p>
-<pre><code>1.主题及标题和作者配置
-    1）找到根目录下的_config.yml，将theme:你想要的主题名
-    2）找到根目录下的_config.ym，将author:你的名字
-    3）找到根目录下的_config.ym，将title:你的标题名
-2.头像
-    找到你应用的主题的_config.yml配置文件，将avar:头像地址
+<h2 id="下载angular-两种方式任选其一"><a href="#下载angular-两种方式任选其一" class="headerlink" title="下载angular(两种方式任选其一)"></a>下载angular(两种方式任选其一)</h2><ul>
+<li>bower install angular –save</li>
+<li>npm install angular –save</li>
+</ul>
+<h2 id="重要的指令"><a href="#重要的指令" class="headerlink" title="重要的指令"></a>重要的指令</h2><ul>
+<li><p>ng-app</p>
+<ul>
+<li>所有需要ng管理的代码必须被包裹在一个有ng-app指令的元素中</li>
+<li>ng-app是ng的入口，表示当前元素的所有指令都会被angular管理（对每一个指令进行分析和操作）</li>
+<li>当angular执行ng-app的代码时会开辟一块空间，这块空间用来存储页面上可能会用到的数据模型</li>
+</ul>
+</li>
+<li><p>ng-model是双向数据绑定的指令</p>
+</li>
+</ul>
+<h2 id="Angular特点"><a href="#Angular特点" class="headerlink" title="Angular特点"></a>Angular特点</h2><ul>
+<li>最大程度的减少页面的DOM操作</li>
+</ul>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><pre><code>&lt;body&gt;
+      &lt;div ng-app&gt;
+    &lt;h2&gt;使用NG实现双向数据绑定&lt;/h2&gt;
+    &lt;input type=&quot;text&quot; ng-model=&quot;user.name&quot; placeholder=&quot;请输入用户名&quot;&gt;
+    &lt;p&gt;hello &lt;strong&gt;{{user.name}}&lt;/strong&gt;&lt;/p&gt;
+      &lt;/div&gt;
+ &lt;script src=&quot;../node_modules/angular/angular.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
 </code></pre>
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/10/14/hexo部署到gitbub/" class="archive-article-date">
-  	<time datetime="2016-10-14T14:20:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-14</time>
+      <a href="/2016/04/14/angular入门01/" class="archive-article-date">
+  	<time datetime="2016-04-14T14:20:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-04-14</time>
 </a>
       
       
@@ -302,7 +300,7 @@ hexo version  #查看Hexo的版本
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/14/面向对象02/">面向对象02</a>
+      <a class="article-title" href="/2016/04/07/面向对象02/">面向对象02</a>
     </h1>
   
 
@@ -389,8 +387,8 @@ hexo version  #查看Hexo的版本
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/10/14/面向对象02/" class="archive-article-date">
-  	<time datetime="2016-10-14T13:26:40.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-14</time>
+      <a href="/2016/04/07/面向对象02/" class="archive-article-date">
+  	<time datetime="2016-04-07T13:26:40.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-04-07</time>
 </a>
       
       
@@ -420,7 +418,7 @@ hexo version  #查看Hexo的版本
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/14/面向对象01/">面向对象01</a>
+      <a class="article-title" href="/2016/04/06/面向对象01/">面向对象01</a>
     </h1>
   
 
@@ -478,84 +476,8 @@ hexo version  #查看Hexo的版本
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/10/14/面向对象01/" class="archive-article-date">
-  	<time datetime="2016-10-14T12:56:04.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-14</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-angular入门01" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/14/angular入门01/">angular入门01</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Angular的核心特性"><a href="#Angular的核心特性" class="headerlink" title="Angular的核心特性"></a>Angular的核心特性</h2><ul>
-<li>MVC</li>
-<li>模块化</li>
-<li>自动化双向数据绑定</li>
-<li>指令系统</li>
-</ul>
-<h2 id="下载angular-两种方式任选其一"><a href="#下载angular-两种方式任选其一" class="headerlink" title="下载angular(两种方式任选其一)"></a>下载angular(两种方式任选其一)</h2><ul>
-<li>bower install angular –save</li>
-<li>npm install angular –save</li>
-</ul>
-<h2 id="重要的指令"><a href="#重要的指令" class="headerlink" title="重要的指令"></a>重要的指令</h2><ul>
-<li><p>ng-app</p>
-<ul>
-<li>所有需要ng管理的代码必须被包裹在一个有ng-app指令的元素中</li>
-<li>ng-app是ng的入口，表示当前元素的所有指令都会被angular管理（对每一个指令进行分析和操作）</li>
-<li>当angular执行ng-app的代码时会开辟一块空间，这块空间用来存储页面上可能会用到的数据模型</li>
-</ul>
-</li>
-<li><p>ng-model是双向数据绑定的指令</p>
-</li>
-</ul>
-<h2 id="Angular特点"><a href="#Angular特点" class="headerlink" title="Angular特点"></a>Angular特点</h2><ul>
-<li>最大程度的减少页面的DOM操作</li>
-</ul>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><pre><code>&lt;body&gt;
-      &lt;div ng-app&gt;
-    &lt;h2&gt;使用NG实现双向数据绑定&lt;/h2&gt;
-    &lt;input type=&quot;text&quot; ng-model=&quot;user.name&quot; placeholder=&quot;请输入用户名&quot;&gt;
-    &lt;p&gt;hello &lt;strong&gt;{{user.name}}&lt;/strong&gt;&lt;/p&gt;
-      &lt;/div&gt;
- &lt;script src=&quot;../node_modules/angular/angular.min.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-</code></pre>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/04/14/angular入门01/" class="archive-article-date">
-  	<time datetime="2016-04-14T14:20:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-04-14</time>
+      <a href="/2016/04/06/面向对象01/" class="archive-article-date">
+  	<time datetime="2016-04-06T12:56:04.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-04-06</time>
 </a>
       
       
@@ -612,6 +534,84 @@ hexo version  #查看Hexo的版本
       
       <a href="/2015/10/12/URL构成/" class="archive-article-date">
   	<time datetime="2015-10-12T11:20:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-10-12</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hexo部署到gitbub" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/14/hexo部署到gitbub/">hexo部署到gitbub</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="将hexo部署到github上的几个步骤："><a href="#将hexo部署到github上的几个步骤：" class="headerlink" title="将hexo部署到github上的几个步骤："></a>将hexo部署到github上的几个步骤：</h2><p><strong>1.下载hexo及初始化</strong></p>
+<ul>
+<li>npm insatll hexo-cli -g</li>
+<li>hexo init blog</li>
+<li>cd blog</li>
+<li>npm insatll </li>
+<li>hexo server</li>
+</ul>
+<p><strong>2.在部署之前更改_config.yml文件改为</strong></p>
+<pre><code>deploy:
+    type: github
+    repository: git@github.com:zhchnchn/zhchnchn.github.io.git
+    branch: master
+</code></pre><p><strong>3.当遇到部署提示找不到Git</strong></p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre><p><strong>4.部署三部曲</strong></p>
+<pre><code>hexo clean 
+hexo generate (hexo g)
+hexo deploy (hexo d)
+</code></pre><p><strong>5.常用命令</strong></p>
+<pre><code>hexo new &quot;postName&quot; #新建文章
+hexo new page &quot;pageName&quot; #新建页面
+hexo generate #生成静态页面至public目录
+hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）
+hexo deploy #将.deploy目录部署到GitHub
+hexo help  # 查看帮助
+hexo version  #查看Hexo的版本
+</code></pre><p><strong>6.hexo配置</strong></p>
+<pre><code>1.主题及标题和作者配置
+    1）找到根目录下的_config.yml，将theme:你想要的主题名
+    2）找到根目录下的_config.ym，将author:你的名字
+    3）找到根目录下的_config.ym，将title:你的标题名
+2.头像
+    找到你应用的主题的_config.yml配置文件，将avar:头像地址
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/09/14/hexo部署到gitbub/" class="archive-article-date">
+  	<time datetime="2015-09-14T14:20:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-09-14</time>
 </a>
       
       
