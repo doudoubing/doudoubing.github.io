@@ -4,14 +4,36 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>窦兵个人博客</title>
+  <title>HTML501 | 窦兵个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="窦兵个人博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="认识HTML5
+HTML5是WHATWG和W3C博弈后的结果，它的牵头人是WHATWG.
+HTML5简称H5.
+狭义HTML5:html5新的语义化标签，表单元素等。
+广义HTML5：HTML5+CSS3+JS
+HTML5不仅仅是html的最新的一个版本，而且它制定了一系列的应用开发标准，是将web应用到应用开发平台的第一个HTML语言。
+HTML5引进了一些新的元素，例如：语义化标签，智能表单等">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML501">
+<meta property="og:url" content="http://yoursite.com/2015/11/07/HTML501/index.html">
 <meta property="og:site_name" content="窦兵个人博客">
+<meta property="og:description" content="认识HTML5
+HTML5是WHATWG和W3C博弈后的结果，它的牵头人是WHATWG.
+HTML5简称H5.
+狭义HTML5:html5新的语义化标签，表单元素等。
+广义HTML5：HTML5+CSS3+JS
+HTML5不仅仅是html的最新的一个版本，而且它制定了一系列的应用开发标准，是将web应用到应用开发平台的第一个HTML语言。
+HTML5引进了一些新的元素，例如：语义化标签，智能表单等">
+<meta property="og:updated_time" content="2016-10-16T11:46:22.376Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="窦兵个人博客">
+<meta name="twitter:title" content="HTML501">
+<meta name="twitter:description" content="认识HTML5
+HTML5是WHATWG和W3C博弈后的结果，它的牵头人是WHATWG.
+HTML5简称H5.
+狭义HTML5:html5新的语义化标签，表单元素等。
+广义HTML5：HTML5+CSS3+JS
+HTML5不仅仅是html的最新的一个版本，而且它制定了一系列的应用开发标准，是将web应用到应用开发平台的第一个HTML语言。
+HTML5引进了一些新的元素，例如：语义化标签，智能表单等">
   
     <link rel="alternative" href="/atom.xml" title="窦兵个人博客" type="application/atom+xml">
   
@@ -135,9 +157,7 @@
 </nav>
 
       <div class="body-wrap">
-        
-  
-    <article id="post-js兼容性问题" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-HTML501" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -146,368 +166,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/14/js兼容性问题/">js兼容性问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JS的兼容性问题（总结）"><a href="#JS的兼容性问题（总结）" class="headerlink" title="JS的兼容性问题（总结）:"></a>JS的兼容性问题（总结）:</h2><pre><code>1.注册事件的兼容处理
- if(obj.addEventListener){
-    obj.addEventListener(type,handler,false);
-  }else{
-    obj.attachEvent(&apos;on&apos;+type,handler);
-  }
-  2.解除绑定的事件兼容处理
-  if(obj.removeEventListener){
-    obj.removeEventListener(type,handler);
-  }else{
-    obj.detachEvent(&apos;on&apos;+type,handler);
-  }
-3.阻止冒泡的兼容处理
-  if(event.stopPropagation)
-   {
-    //标准浏览器
-     event.stopPropagation();
-   }else{
-    //ie6,7,8
-     event.cancleBubble = true;
-   }
-4.阻止默认行为的兼容处理
-  if(e.preventDefault){
-    //标准浏览器
-    e.preventDefault();
-   }else{
-    //IE678
-    e.returnValue = false;
-   }
-5.事件对象的兼容处理
-  e = e || window.event;
-6.获取触发事件的对象
-  var tar = e.target || e.srcElement;
-</code></pre>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/10/14/js兼容性问题/" class="archive-article-date">
-  	<time datetime="2016-10-14T14:27:04.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-14</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-angular入门01" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/14/angular入门01/">angular入门01</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Angular的核心特性"><a href="#Angular的核心特性" class="headerlink" title="Angular的核心特性"></a>Angular的核心特性</h2><ul>
-<li>MVC</li>
-<li>模块化</li>
-<li>自动化双向数据绑定</li>
-<li>指令系统</li>
-</ul>
-<h2 id="下载angular-两种方式任选其一"><a href="#下载angular-两种方式任选其一" class="headerlink" title="下载angular(两种方式任选其一)"></a>下载angular(两种方式任选其一)</h2><ul>
-<li>bower install angular –save</li>
-<li>npm install angular –save</li>
-</ul>
-<h2 id="重要的指令"><a href="#重要的指令" class="headerlink" title="重要的指令"></a>重要的指令</h2><ul>
-<li><p>ng-app</p>
-<ul>
-<li>所有需要ng管理的代码必须被包裹在一个有ng-app指令的元素中</li>
-<li>ng-app是ng的入口，表示当前元素的所有指令都会被angular管理（对每一个指令进行分析和操作）</li>
-<li>当angular执行ng-app的代码时会开辟一块空间，这块空间用来存储页面上可能会用到的数据模型</li>
-</ul>
-</li>
-<li><p>ng-model是双向数据绑定的指令</p>
-</li>
-</ul>
-<h2 id="Angular特点"><a href="#Angular特点" class="headerlink" title="Angular特点"></a>Angular特点</h2><ul>
-<li>最大程度的减少页面的DOM操作</li>
-</ul>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><pre><code>&lt;body&gt;
-      &lt;div ng-app&gt;
-    &lt;h2&gt;使用NG实现双向数据绑定&lt;/h2&gt;
-    &lt;input type=&quot;text&quot; ng-model=&quot;user.name&quot; placeholder=&quot;请输入用户名&quot;&gt;
-    &lt;p&gt;hello &lt;strong&gt;{{user.name}}&lt;/strong&gt;&lt;/p&gt;
-      &lt;/div&gt;
- &lt;script src=&quot;../node_modules/angular/angular.min.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-</code></pre>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/04/14/angular入门01/" class="archive-article-date">
-  	<time datetime="2016-04-14T14:20:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-04-14</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-面向对象02" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/07/面向对象02/">面向对象02</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><ul>
-<li>什么是原型链？<ul>
-<li>原型链是由对象组成的有限对象链，用于实现继承和共享属性。</li>
-</ul>
-</li>
-<li>原型链的作用？<ul>
-<li>实现数据共存、继承</li>
-</ul>
-</li>
-<li>原型链的本质？<ul>
-<li>实例对象与原型形成的链，链之间的联系通过<strong>proto</strong>。</li>
-</ul>
-</li>
-<li>没有办法通过实例修改原型上的内容。</li>
-<li>当要找的某个属性找到了，就不会再向上找了，如果没找到就会按着原型链继续往上找直到找到。</li>
-</ul>
-<p><strong>继承的思想：别人给了我，我的还是我的</strong></p>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
-<li>函数扮演的角色：(函数扮演什么角色取决于函数的使用方式)</li>
-</ul>
-<pre><code>- 普通函数
-- 构造函数
-- 函数也是对象（是函数也是对象 jquery里内部体现了这两种角色
- $(&apos;div&apos;) $是函数    $.ajax(); $是对象）
-</code></pre><ul>
-<li><p>其中Math不是函数是对象</p>
-<ul>
-<li><code>console.log( typeof Math);      object</code></li>
-<li><code>console.log(typeof Array);       function</code></li>
-<li><code>console.log(Math instanceof object)   true  Math是Object的实例</code></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>函数的种类</p>
-<ul>
-<li>系统函数（内置API）</li>
-<li>自定义函数（主讲）</li>
-</ul>
-</li>
-<li><p>定义方式：</p>
-<ul>
-<li>函数声明<br><code>function fn(){}</code></li>
-<li>函数表达式<br><code>var fn = function(){}</code></li>
-<li>Function (很少有 在框架内部会用)<br><code>var fn = new Function(参数，函数体) 最后一个参数是函数体，前后的参数都是对应的形参</code></li>
-</ul>
-</li>
-</ul>
-<p><strong>函数声明和函数表达式在预解析时有差别前者调用可以在声明前后者不可以，在功能上无差别</strong></p>
-<ul>
-<li><p>浏览器的解析器在运行JS代码的时候，分为两个阶段：</p>
-<ul>
-<li>预解析 函数声明、变量声明、参数声明会提升</li>
-<li>执行</li>
-</ul>
-</li>
-<li><p>JS中函数可以先使用后定义吗？答：可以，因为预解析会将函数的声明提前</p>
-</li>
-<li><p>函数的调用</p>
-<ul>
-<li>普通函数的调用</li>
-<li>构造函数的调用</li>
-<li>对象方法的调用<ul>
-<li>call/apply的调用</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>函数的调用方式觉得了this的指向（5种）</p>
-<p>  1)普通函数里的this<br>  2)构造函数<br>  3)原型方法中的this和构造函数中的this指向相同，都是实例对象<br>  4)对象的方法<br>  5)定时函数<br>  如果作为普通函数使用，不推荐在函数内使用this,在严格模式下，普通函数中的this就是window</p>
-</li>
-</ul>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/04/07/面向对象02/" class="archive-article-date">
-  	<time datetime="2016-04-07T13:26:40.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-04-07</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-面向对象01" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/06/面向对象01/">面向对象01</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="什么是面向对象？"><a href="#什么是面向对象？" class="headerlink" title="什么是面向对象？"></a>什么是面向对象？</h1><ul>
-<li><p>面向对象是一种编程模式</p>
-<ul>
-<li>好处：1.可维护性高 2.重用性高</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>构造函数、实例对象、原型三者的关系？</p>
-<ul>
-<li>所有的构造函数都有一个原型属性<code>prototype</code>,属性值也是一个对象（<code>new Object()</code>）原型对象</li>
-<li>实例对象都有一个默认的属性<code>__proto__</code>，该属性不是标准（每个浏览器的这个属性的名<br>称不一样）在实际开发中不可以使用这个属性，该属性是浏览器自己使用，该属性的指向和原<br>型prototype指向相同。<ul>
-<li>3.原型对象（<code>prototype</code>）里面都有一个<code>constructor</code>属性，该属性指向原型所属的构造函数。</li>
-</ul>
-</li>
-</ul>
-<hr>
-</li>
-<li><p>原型</p>
-<ul>
-<li>实现数据共享</li>
-<li>构造函数中原型属性<code>prototype</code>指向的区域被所有的实例共享</li>
-<li><code>prototype</code>是从构造函数的角度来说的。</li>
-<li><code>__proto__</code>是从实例对象的角度来说的</li>
-</ul>
-<hr>
-</li>
-<li>this<ul>
-<li>构造函数中的this</li>
-<li>原型方法中的this</li>
-<li>事件函数中的this</li>
-</ul>
-<hr>
-</li>
-<li><p>new 实际上背后做了什么？</p>
-<ul>
-<li>分配内存，用来存储具体的数据。</li>
-<li>分配好之后用this指向这块区域（this存储内存地址）实际上this就是一个内存地址</li>
-<li>接下来会通过this指向的这块区域添加属性，并且存放数据。</li>
-<li>返回this(内存地址)</li>
-</ul>
-</li>
-</ul>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><pre><code>一般情况下，方法放在原型上，属性放到构造函数中，达成的效果是：所有实例共享方法，但数据各自有一份。
-</code></pre>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/04/06/面向对象01/" class="archive-article-date">
-  	<time datetime="2016-04-06T12:56:04.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-04-06</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-HTML501" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/07/HTML501/">HTML501</a>
+    <h1 class="article-title" itemprop="name">
+      HTML501
     </h1>
   
 
@@ -672,151 +332,53 @@ less than equal to 小于等于
   </div>
 </article>
 
-
-
-
-
-
-
-
-
-
   
-    <article id="post-URL构成" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+<nav id="article-nav">
+  
+    <a href="/2016/04/06/面向对象01/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/12/URL构成/">URL构成</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="可以通过window-location拿到所有信息"><a href="#可以通过window-location拿到所有信息" class="headerlink" title="可以通过window.location拿到所有信息"></a>可以通过window.location拿到所有信息</h2><ul>
-<li><p><a href="https://www.baidu.com:8080/aaa/1.html?id=10#name为例：" target="_blank" rel="external">https://www.baidu.com:8080/aaa/1.html?id=10#name为例：</a></p>
-<ul>
-<li>protocol: https (协议名)</li>
-<li>host: www.baidu.com:8080 （主机地址）<br>　　    - hostname: www.baidu.com  （主机名）</li>
-<li>port: 8080 （端口号）</li>
-<li>pathname: /aaa/1.html （路径名）</li>
-<li>search: ?id=10 （查询参数）</li>
-<li>hash: #name （锚点）</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2015/10/12/URL构成/" class="archive-article-date">
-  	<time datetime="2015-10-12T11:20:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-10-12</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hexo部署到gitbub" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          面向对象01
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/14/hexo部署到gitbub/">hexo部署到gitbub</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="将hexo部署到github上的几个步骤："><a href="#将hexo部署到github上的几个步骤：" class="headerlink" title="将hexo部署到github上的几个步骤："></a>将hexo部署到github上的几个步骤：</h2><p><strong>1.下载hexo及初始化</strong></p>
-<ul>
-<li>npm insatll hexo-cli -g</li>
-<li>hexo init blog</li>
-<li>cd blog</li>
-<li>npm insatll </li>
-<li>hexo server</li>
-</ul>
-<p><strong>2.在部署之前更改_config.yml文件改为</strong></p>
-<pre><code>deploy:
-    type: github
-    repository: git@github.com:zhchnchn/zhchnchn.github.io.git
-    branch: master
-</code></pre><p><strong>3.当遇到部署提示找不到Git</strong></p>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre><p><strong>4.部署三部曲</strong></p>
-<pre><code>hexo clean 
-hexo generate (hexo g)
-hexo deploy (hexo d)
-</code></pre><p><strong>5.常用命令</strong></p>
-<pre><code>hexo new &quot;postName&quot; #新建文章
-hexo new page &quot;pageName&quot; #新建页面
-hexo generate #生成静态页面至public目录
-hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）
-hexo deploy #将.deploy目录部署到GitHub
-hexo help  # 查看帮助
-hexo version  #查看Hexo的版本
-</code></pre><p><strong>6.hexo配置</strong></p>
-<pre><code>1.主题及标题和作者配置
-    1）找到根目录下的_config.yml，将theme:你想要的主题名
-    2）找到根目录下的_config.ym，将author:你的名字
-    3）找到根目录下的_config.ym，将title:你的标题名
-2.头像
-    找到你应用的主题的_config.yml配置文件，将avar:头像地址
-</code></pre>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2015/09/14/hexo部署到gitbub/" class="archive-article-date">
-  	<time datetime="2015-09-14T14:20:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-09-14</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
+      </div>
+    </a>
   
   
+    <a href="/2015/10/12/URL构成/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">URL构成</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
 
 
       </div>
@@ -838,8 +400,8 @@ hexo version  #查看Hexo的版本
 		fancybox: true,
 		mathjax: false,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
