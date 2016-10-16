@@ -24,7 +24,7 @@ HTML5简称H5.
 广义HTML5：HTML5+CSS3+JS
 HTML5不仅仅是html的最新的一个版本，而且它制定了一系列的应用开发标准，是将web应用到应用开发平台的第一个HTML语言。
 HTML5引进了一些新的元素，例如：语义化标签，智能表单等">
-<meta property="og:updated_time" content="2016-10-16T11:46:22.376Z">
+<meta property="og:updated_time" content="2016-10-16T11:53:35.915Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML501">
 <meta name="twitter:description" content="认识HTML5
@@ -189,8 +189,7 @@ HTML5引进了一些新的元素，例如：语义化标签，智能表单等">
 <li>在实际开发中，应规范书写，不要太随意。</li>
 </ol>
 <h2 id="什么是语义化标签"><a href="#什么是语义化标签" class="headerlink" title="什么是语义化标签"></a>什么是语义化标签</h2><ul>
-<li><p>赋予标签意义，用合适的标签描述web结构。</p>
-</li>
+<li>赋予标签意义，用合适的标签描述web结构。</li>
 <li><p>常用的语义化标签</p>
 <ul>
 <li>header      头部标签</li>
@@ -218,7 +217,7 @@ HTML5引进了一些新的元素，例如：语义化标签，智能表单等">
 </li>
 </ul>
 <h2 id="兼容性处理"><a href="#兼容性处理" class="headerlink" title="兼容性处理"></a>兼容性处理</h2><p><strong>ie提供的hack（IE留的后门）</strong></p>
-<pre><code>`&lt;!--[if lte IE 8]&gt;
+<pre><code>&lt;!--[if lte IE 8]&gt;
 &lt;script&gt;
  document.createElement(&apos;header&apos;);                               
  document.createElement(&apos;nav&apos;);
@@ -227,7 +226,7 @@ HTML5引进了一些新的元素，例如：语义化标签，智能表单等">
  document.createElement(&apos;aside&apos;);
  document.createElement(&apos;footer&apos;);
 &lt;/script&gt;
-&lt;![endif]--&gt;`
+&lt;![endif]--&gt;
 </code></pre><p><strong>有些标签默认是行内元素 所以要加上display:block;</strong></p>
 <pre><code>&lt;!--[if lte IE 8]&gt;
 &lt;![endif]--&gt;
@@ -237,17 +236,15 @@ less than equal to 小于等于
 &lt;script src=&quot;html5shiv.min.js&quot;&gt;&lt;/script&gt;
 &lt;![endif]--&gt;
 </code></pre><h2 id="时间、媒体区域和标记标签"><a href="#时间、媒体区域和标记标签" class="headerlink" title="时间、媒体区域和标记标签"></a>时间、媒体区域和标记标签</h2><ul>
-<li>time  时间标签</li>
-<li><time>2015年11月21日</time></li>
-<li><p>time标签里又提供了一个属性 datetime,这个属性指明了具体的时间</p>
-</li>
-<li><p>figure 媒体区域标签，用来表示媒体（图片，视频，音频）</p>
-</li>
-<li>figcaption  媒体区域的标题</li>
-<li>mark 标记标签 会产生荧光笔的效果</li>
+<li><code>time</code>  时间标签</li>
+<li><code>&lt;time&gt;2015年11月21日&lt;/time&gt;</code></li>
+<li><code>time</code>标签里又提供了一个属性 <code>datetime</code>,这个属性指明了具体的时间</li>
+<li><code>figure</code> 媒体区域标签，用来表示媒体（图片，视频，音频）</li>
+<li><code>figcaption</code>  媒体区域的标题</li>
+<li><code>mark</code> 标记标签 会产生荧光笔的效果</li>
 </ul>
 <h2 id="进度条标签"><a href="#进度条标签" class="headerlink" title="进度条标签"></a>进度条标签</h2><ul>
-<li>progress 进度条标签<ul>
+<li><code>progress</code> 进度条标签<ul>
 <li><code>&lt;progress min=&quot;0&quot;  value=&quot;20&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code><h2 id="检测HTML5支持情况的两个网站"><a href="#检测HTML5支持情况的两个网站" class="headerlink" title="检测HTML5支持情况的两个网站"></a>检测HTML5支持情况的两个网站</h2></li>
 </ul>
 </li>
@@ -255,7 +252,7 @@ less than equal to 小于等于
 <li>检测支持度：<a href="http://caniuse.com" target="_blank" rel="external">http://caniuse.com</a></li>
 </ul>
 <h2 id="计量标签"><a href="#计量标签" class="headerlink" title="计量标签"></a>计量标签</h2><ul>
-<li>meter 计量标签（可以认为是progress的升级版，多了两个属性：low high.）<ul>
+<li><code>meter</code> 计量标签（可以认为是progress的升级版，多了两个属性：low high.）<ul>
 <li>当value&lt;=low 的时候，呈现绿色；</li>
 <li>当value&gt;low且value&lt;=high的时候，呈现黄色；</li>
 <li>当value&gt;high的时候，呈现红色。</li>
@@ -286,9 +283,9 @@ less than equal to 小于等于
 </ul>
 <ul>
 <li>新增的表单元素<ul>
-<li>datalist  数据列表</li>
-<li>datalist是隐藏在表单域中的，不显示的，使用它里面数据的表单元素应该用list属性绑定datalist的id</li>
-<li>output   输出</li>
+<li><code>datalist</code>  数据列表</li>
+<li><code>datalist</code>是隐藏在表单域中的，不显示的，使用它里面数据的表单元素应该用list属性绑定<code>datalist</code>的id</li>
+<li><code>output</code>   输出</li>
 <li><code>&lt;output&gt;&lt;/output&gt;</code> 用于输出计算结果的</li>
 </ul>
 </li>
@@ -308,10 +305,11 @@ less than equal to 小于等于
 </li>
 <li><p>新的表单事件</p>
 <ul>
-<li>oninvalid     表单元素验证不通过时，触发</li>
-<li><p>oninput       当用户输入时，触发</p>
+<li><code>oninvalid</code>     表单元素验证不通过时，触发</li>
+<li><p><code>oninput</code>       当用户输入时，触发</p>
 </li>
-<li><p>oninput与onchange的区别<br>-<br>  1.oninput在用户一输入时就触发，onchange是用户输入后，并且该表单元素失去焦点时才触发。<br>  2.oninput只能作用于input和textarea;onchange可以作用于input，textarea和select等<br>  3.oninput的兼容性没有onchange好。</p>
+<li><p><code>oninput</code>与<code>onchange</code>的区别</p>
+<p>  1.oninput在用户一输入时就触发，onchange是用户输入后，并且该表单元素失去焦点时才触发。<br>  2.oninput只能作用于input和textarea;onchange可以作用于input，textarea和select等<br>  3.oninput的兼容性没有onchange好。</p>
 </li>
 </ul>
 </li>
